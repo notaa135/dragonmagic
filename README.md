@@ -6,9 +6,9 @@
 
 DragonMagic connects math and English practice with an adventure: choose a stage, answer a question, and progress through a fantasy world. I use this personal project to turn product requirements into working screens, review AI-assisted changes, and decide what evidence is needed before accepting them.
 
-![Stage selection in the DragonMagic prototype](assets/stage-select-runtime.png)
+![DragonMagic title screen running in Godot](assets/title-screen-runtime.png)
 
-*Actual Godot runtime capture, May 18, 2026. Stage selection shows progression, a mission, and chapter rewards.*
+*Actual Godot runtime title screen, May 17, 2026. The opening screen introduces the math and English adventure.*
 
 ## My contribution
 
@@ -24,7 +24,7 @@ Godot 4.6.1 and GDScript support the prototype. My emphasis is product direction
 
 | Evidence | What it shows |
 |---|---|
-| [Runtime gallery and progress](docs/PROGRESS.md) | Stage selection, the hub, and math practice |
+| [Runtime gallery and progress](docs/PROGRESS.md) | Title screen, stage selection, the hub, and math practice |
 | [Verification record](docs/VERIFICATION.md) | Executable learner-profile checks and dated project evidence |
 | [Regression case study](docs/CASE_STUDY.md) | Why an apparently safe cleanup broke stage navigation |
 | [Learner-profile source sample](src/profile_resolver.gd) | Explicit rules for hints, timing, difficulty, and fallback behavior |

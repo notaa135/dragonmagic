@@ -45,6 +45,7 @@ This result establishes structural consistency. It does not establish that every
 |---|---|---|
 | May 2, 2026 | Instantiate 14 selected scenes after reversing a broken cleanup | 14/14 passed the recorded smoke check |
 | May 2, 2026 | Headless parse check for that reviewed revision | Exit 0; no parse errors reported |
+| May 17, 2026 | Direct Godot runtime title capture in the UI review handoff | Title screen selected as the main portfolio image |
 | May 18, 2026 | Capture prototype scenes through Godot MCP | 11 runtime images collected; three selected for this repository |
 
 These checks were not rerun as a full-game test for the September portfolio publication.
@@ -58,6 +59,7 @@ The May 18 capture report records a failed headless screenshot attempt: a null v
 Paths below are relative to the original development repository, not links to files bundled here:
 
 - `scripts/validate_quiz_data.py`
+- `_handoff_dragonmagic_review/14_UI_SCREENSHOT_AUDIT.md`
 - `REPORTS/research/r_p14h/smoke/_REPORT.md`
 - `REPORTS/research/r_p14h/regression/_REPORT.md`
 - `REPORTS/rescue/baseline_capture_report.md` in the later rescue worktree
