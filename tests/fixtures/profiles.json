@@ -1,0 +1,28 @@
+{
+  "_note": "Synthetic portfolio fixtures; no original learner or quiz data.",
+  "default_profile": "beginner_sample",
+  "profiles": [
+    {
+      "profile_id": "beginner_sample",
+      "timer_policy": "off",
+      "hint_policy": "limited",
+      "difficulty_cap": 2.5,
+      "safe_for_beginner_required": true,
+      "allowed_subjects": ["MATH"],
+      "option_count_range": [2, 3],
+      "penalty_config": {"buff_pct": 0.0, "allow_retry_on_wrong": true},
+      "session_defaults": {"count": 4, "review_pct": 50, "new_pct": 50, "challenge_pct": 0}
+    },
+    {
+      "profile_id": "challenge_sample",
+      "timer_policy": "standard",
+      "hint_policy": "none",
+      "difficulty_cap": 7.0,
+      "safe_for_beginner_required": false,
+      "allowed_subjects": ["MATH", "REASONING"],
+      "option_count_range": [4, 4],
+      "penalty_config": {"buff_pct": 0.15, "allow_retry_on_wrong": false},
+      "session_defaults": {"count": 8, "review_pct": 25, "new_pct": 25, "challenge_pct": 50}
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+name: Verify learner profiles
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  profile-rules:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install official Godot 4.6.1
+        env:
+          GODOT_RELEASE_URL: https://github.com/godotengine/godot-builds/releases/download/4.6.1-stable
+          GODOT_ARCHIVE: Godot_v4.6.1-stable_linux.x86_64.zip
+          GODOT_SHA256: cecd0cb6b55e931318a9d7237dc4197d69ea914966787a454808523626e2789f
+        run: |
+          curl --fail --location --retry 3 "$GODOT_RELEASE_URL/$GODOT_ARCHIVE" --output "$RUNNER_TEMP/godot.zip"
+          echo "$GODOT_SHA256  $RUNNER_TEMP/godot.zip" | sha256sum --check
+          unzip -q "$RUNNER_TEMP/godot.zip" -d "$RUNNER_TEMP/godot"
+          chmod +x "$RUNNER_TEMP/godot/Godot_v4.6.1-stable_linux.x86_64"
+      - name: Check learner-profile behavior
+        run: |
+          "$RUNNER_TEMP/godot/Godot_v4.6.1-stable_linux.x86_64" --headless --path . --script res://tests/profile_resolver_test.gd
