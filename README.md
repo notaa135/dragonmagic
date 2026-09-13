@@ -1,5 +1,7 @@
 # DragonMagic
 
+[![Verify learner profiles](https://github.com/notaa135/dragonmagic/actions/workflows/verify.yml/badge.svg)](https://github.com/notaa135/dragonmagic/actions/workflows/verify.yml)
+
 **An educational RPG prototype built through AI-assisted development and evidence-based review.**
 
 DragonMagic connects math and English practice with an adventure: choose a stage, answer a question, and progress through a fantasy world. I use this personal project to turn product requirements into working screens, review AI-assisted changes, and decide what evidence is needed before accepting them.
